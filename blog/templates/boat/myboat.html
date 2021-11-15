@@ -7,7 +7,7 @@
     <a href="{% url 'add-boat' %}" class="btn btn-primary">Add new Boat</a><br><br>
     {% for boat in object_list %}
         {% if boat.owner.id == user.id %}
-            <div class="card">
+            <div class="card" style="width: 25rem; height: 25rem;">
                 <div class="card-body">
                     <h3><a href="{% url 'boat-detail' boat.pk %}">{{ boat.name }}</a></h3>
                     <p>

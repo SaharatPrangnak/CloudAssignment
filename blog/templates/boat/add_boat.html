@@ -5,10 +5,16 @@
 {% block content %}
     <h1>Add Boat</h1>
     <div class="form-group">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
             <button class="btn btn-success">Add</button>
         </form>
+    <script>
+    window.onload = function() {
+        var dogOwner = "{{ user.id }}";
+        document.getElementById('input').value = dogOwner;
+    }
+    </script>
     </div>
 {% endblock %}
