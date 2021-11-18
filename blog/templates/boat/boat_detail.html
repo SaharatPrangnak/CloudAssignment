@@ -17,7 +17,7 @@
             <a href="{% url 'update-boat' boat.pk %}" class="btn btn-secondary">Update</a>
             <a href="{% url 'delete-boat' boat.pk %}" class="btn btn-danger">Delete</a>
         {% else %}
-            <a href="#" class="btn btn-primary">Rent boat</a>
+            <a href="{% url 'rent-boat' boat.pk %}" class="btn btn-primary">Rent boat</a>
         {% endif %}
     {% endif %}
 {% endblock %}
